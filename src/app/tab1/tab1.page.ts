@@ -12,7 +12,7 @@ export class Tab1Page {
   constructor(private newsService: NewsService) {}
 
   ionViewWillEnter() {
-    this.newsService.getData('top-headlines?country=in').subscribe(data => {
+    this.newsService.getData('top-headlines?country=us').subscribe(data => {
       this.masterArray = data['articles'];
     })
   }

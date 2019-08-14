@@ -1,11 +1,21 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Breaking News
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
+    <ion-toolbar>
+      <ion-title>
+        Indian Headlines
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
   
-</ion-content>
+  <ion-content>
+    <ion-card *ngFor="let item of masterArray">
+      <img src="{{item.urlToImage}}" />
+      <ion-card-header>
+        <ion-card-title>{{item.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{item.description}}
+      </ion-card-content>
+      <ion-button href="{{item.url}}" expand="block" shape="round" fill="outline">Open in Browser</ion-button>
+    </ion-card>
+  </ion-content>
+  
